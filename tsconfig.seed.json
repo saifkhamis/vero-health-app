@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "types": ["node"]
+  },
+  "exclude": ["node_modules", "prisma.config.ts", ".next"]
+}

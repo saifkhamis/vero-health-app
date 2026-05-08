@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Physician {
+  id               String             @id @default(cuid())
+  name             String
+  specialty        String
+  bio              String
+  avatarInitials   String
+  availabilitySlots AvailabilitySlot[]
+  bookings         Booking[]
+}
+
+model AvailabilitySlot {
+  id          String    @id @default(cuid())
+  physicianId String
+  date        String
+  time        String
+  isBooked    Boolean   @default(false)
+  physician   Physician @relation(fields: [physicianId], references: [id])
+  booking     Booking?
+}
+
+model Booking {
+  id             String           @id @default(cuid())
+  physicianId    String
+  slotId         String           @unique
+  patientName    String
+  patientEmail   String
+  patientPhone   String
+  dateOfBirth    String
+  reasonForVisit String
+  notes          String?
+  status         String           @default("pending")
+  createdAt      DateTime         @default(now())
+  physician      Physician        @relation(fields: [physicianId], references: [id])
+  slot           AvailabilitySlot @relation(fields: [slotId], references: [id])
+}
