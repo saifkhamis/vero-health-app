@@ -5,12 +5,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <nav className="border-b border-[#E7E5E0] bg-white px-6 py-4">
-        <div className="mx-auto flex max-w-5xl items-center justify-between">
-          <span className="text-lg font-bold text-blue-600">Vero Health</span>
-        </div>
+        <span className="text-lg font-bold text-blue-600">Vero Health</span>
       </nav>
 
-      <div className="flex flex-1 flex-col items-center justify-center bg-gradient-to-b from-[#F5F4F1] to-white px-6 py-28 text-center">
+      <div className="flex flex-1 flex-col items-center justify-center bg-gradient-to-b from-[#F5F4F1] to-white px-6 py-14 text-center">
         <div className="mx-auto max-w-2xl">
           <div className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700">
             Patient Booking Portal

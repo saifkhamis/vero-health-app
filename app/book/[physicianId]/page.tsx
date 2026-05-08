@@ -61,7 +61,7 @@ export default function ChooseSlotPage() {
   return (
     <main className="min-h-screen bg-[#FAFAF8]">
       <nav className="border-b border-[#E7E5E0] bg-white px-6 py-4">
-        <div className="mx-auto flex max-w-3xl items-center justify-between">
+        <div className="flex items-center justify-between">
           <Link href="/" className="text-lg font-bold text-blue-600">Vero Health</Link>
           <Link href="/book" className="text-sm text-gray-500 hover:text-gray-700">← All Physicians</Link>
         </div>
