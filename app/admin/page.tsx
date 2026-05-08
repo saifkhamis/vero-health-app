@@ -3,7 +3,6 @@
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import BookingTable from '@/components/BookingTable'
-import StatusBadge from '@/components/StatusBadge'
 import Footer from '@/components/Footer'
 import type { Booking, BookingStatus, Physician } from '@/lib/types'
 
